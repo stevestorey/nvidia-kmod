@@ -21,7 +21,7 @@
 
 Name:           nvidia-kmod
 Version:        440.64
-Release:        1%{?dist}
+Release:        1a%{?dist}
 Summary:        NVIDIA display driver kernel module
 Epoch:          3
 License:        NVIDIA License
@@ -30,6 +30,7 @@ ExclusiveArch:  x86_64
 
 Source0:        %{name}-%{version}-x86_64.tar.xz
 Source11:       nvidia-kmodtool-excludekernel-filterfile
+Patch1:          kernel-5.6.patch
 
 # get the needed BuildRequires (in parts depending on what we build for)
 BuildRequires:  kmodtool
